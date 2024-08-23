@@ -17,6 +17,7 @@ app.get("/", (req, res) => {
 app.get("/race", (req, res) => {
   res.render("index.html", {
     page: "race/index.html",
+    title: "Race",
   });
 });
 
