@@ -1,3 +1,31 @@
 .w-10 {
-    width: 10%;
+    width: 10% !important;
+}
+
+.h-40 {
+    height: 40% !important;
+}
+
+.h-44 {
+    height: 44% !important;
+}
+
+.h-56 {
+    height: 56% !important;
+}
+
+.h-64 {
+    height: 64% !important;
+}
+
+.h-68 {
+    height: 68% !important;
+}
+
+.h-71 {
+    height: 71% !important;
+}
+
+.h-80 {
+    height: 80% !important;
 }

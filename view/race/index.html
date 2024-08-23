@@ -1,0 +1,57 @@
+<div class="d-flex justify-content-around w-100 vh-50">
+    <% races.forEach((race) => { %>
+        <button
+            type="button"
+            class="btn btn-outline-primary w-10 vh-100 d-flex justify-content-end flex-column align-items-center overflow-hidden py-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#<%= race %>_popup"
+            aria-expanded="false"
+            aria-controls="<%= race %>_popup"
+        >
+            <img class="h-<%= {
+                halfling: 40,
+                gnome: 44,
+                dwarf: 56,
+                elf: 64, 
+                'half-elf': 68,
+                tiefling: 68,
+                human: 68,
+                'half-orc': 71,
+                dragonborn: 80,
+            }[race] %> mb-4" src="/static/image/race/<%= race %>.png" alt="<%= race %> photo">
+            <h3><%= race.toUpperCase() %></h3>
+        </button>
+    <% }); %>
+</div>
+
+<% races.forEach((race) => { %>
+    <div class="top-0 start-0 position-absolute collapse bg-light" id="<%= race %>_popup">
+        <div class="container-fluid d-flex flex-column p-5 vh-100 vw-100">
+            <div class="row border-bottom border-primary">
+                <div class="col">
+                    <h1><%= race.toUpperCase() %></h1>
+                </div>
+                <div class="col-auto">
+                    <button
+                        type="button"
+                        class="btn-close"
+                        aria-label="Close"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#<%= race %>_popup"
+                        aria-expanded="true"
+                        aria-controls="<%= race %>_popup"
+                    ></button>
+                </div>
+            </div>
+    
+            <article class="mt-5 row h-100">
+                <%- include("_" + race + "-popup.html"); %>
+            </article>
+    
+            <form class="row d-flex justify-content-center" action="/subraces" method="get">
+                <input type="hidden" name="race" value="<%= race %>">
+                <button type="submit" class="btn btn-primary btn-lg     w-auto px-5">Confirm</button>
+            </form>
+        </div>
+    </div>
+<% }); %>

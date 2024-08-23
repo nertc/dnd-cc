@@ -18,6 +18,17 @@ app.get("/race", (req, res) => {
   res.render("index.html", {
     page: "race/index.html",
     title: "Race",
+    races: [
+      "halfling",
+      "gnome",
+      "dwarf",
+      "elf",
+      "half-elf",
+      "tiefling",
+      "human",
+      "half-orc",
+      "dragonborn",
+    ],
   });
 });
 
