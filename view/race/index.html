@@ -1,8 +1,8 @@
-<div class="d-flex justify-content-around w-100 vh-50">
+<div class="d-flex justify-content-around min-w-1000px w-100 h-100">
     <% races.forEach((race) => { %>
         <button
             type="button"
-            class="btn btn-outline-primary w-10 vh-100 d-flex justify-content-end flex-column align-items-center overflow-hidden py-3"
+            class="btn btn-outline-primary w-10 h-100 d-flex justify-content-end flex-column align-items-center overflow-hidden py-3"
             data-bs-toggle="collapse"
             data-bs-target="#<%= race %>_popup"
             aria-expanded="false"
@@ -19,14 +19,16 @@
                 'half-orc': 71,
                 dragonborn: 80,
             }[race] %> mb-4" src="/static/image/race/<%= race %>.png" alt="<%= race %> photo">
-            <h3><%= race.toUpperCase() %></h3>
+            <div class="h-5em d-flex align-items-center justify-content-center">
+                <h3 class="text-center text-break"><%= race.toUpperCase() %></h3>
+            </div>
         </button>
     <% }); %>
 </div>
 
 <% races.forEach((race) => { %>
-    <div class="top-0 start-0 position-absolute collapse bg-light" id="<%= race %>_popup">
-        <div class="container-fluid d-flex flex-column p-5 vh-100 vw-100">
+    <div class="top-0 start-0 position-absolute collapse bg-light bg-gradient" id="<%= race %>_popup">
+        <div class="container-fluid d-flex flex-column p-5 dvh-100 vw-100">
             <div class="row border-bottom border-primary">
                 <div class="col">
                     <h1><%= race.toUpperCase() %></h1>
@@ -44,11 +46,11 @@
                 </div>
             </div>
     
-            <article class="mt-5 row h-100">
+            <article class="mt-3 row h-100 border border-primary rounded d-flex flex-column flex-nowrap flex-lg-wrap overflow-lg-hidden align-items-stretch overflow-auto p-3">
                 <%- include("_" + race + "-popup.html"); %>
             </article>
     
-            <form class="row d-flex justify-content-center" action="/subraces" method="get">
+            <form class="row mt-3 d-flex justify-content-center" action="/subraces" method="get">
                 <input type="hidden" name="race" value="<%= race %>">
                 <button type="submit" class="btn btn-primary btn-lg     w-auto px-5">Confirm</button>
             </form>

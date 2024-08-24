@@ -1,3 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    overflow-y: hidden;
+    overflow-x: auto;
+}
+
+p, h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
 .w-10 {
     width: 10% !important;
 }
@@ -28,4 +41,20 @@
 
 .h-80 {
     height: 80% !important;
+}
+
+.h-5em {
+    height: 5em !important;
+}
+
+.dvh-100 {
+    height: 100dvh !important;
+}
+
+.w-max-content {
+    width: max-content !important;
+}
+
+.min-w-1000px {
+    min-width: 1000px;
 }
