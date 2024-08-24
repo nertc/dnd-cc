@@ -10,7 +10,7 @@ const halfling = {
         { title: "Lifespan", value: "150 y" },
         { title: "Adulthood", value: "20 y" },
         { title: "Size", value: "Small" },
-        { title: "Speed", value: "7.5 m (Slow)" },
+        { title: "Speed", value: "7.5 m (slow)" },
         {
           title: "Subraces",
           value: "Lightfoot, stout",
@@ -28,7 +28,7 @@ const halfling = {
         },
         {
           title: "Brave",
-          value: "Adventage on frightened saving throws",
+          value: "Advantage on frightened saving throws",
         },
         {
           title: "Nimbleness",
@@ -50,7 +50,7 @@ const gnome = {
         { title: "Weight", value: "18-20 kg" },
         { title: "Lifespan", value: "350-500 y" },
         { title: "Adulthood", value: "40 y" },
-        { title: "Speed", value: "7.5 m (Slow)" },
+        { title: "Speed", value: "7.5 m (slow)" },
         {
           title: "Subraces",
           value: "Forest gnome, rock gnome",
@@ -69,7 +69,7 @@ const gnome = {
         },
         {
           title: "Cunning",
-          value: "Adventage on intelligence, wisdom and charisma saving throws",
+          value: "Advantage on intelligence, wisdom and charisma saving throws",
         },
         {
           title: "Nimbleness",
@@ -87,13 +87,13 @@ const dwarf = {
     {
       title: "Stats",
       rows: [
-        { title: "Height", value: "1.2-1.5 m (small)" },
+        { title: "Height", value: "1.2-1.5 m (medium)" },
         { title: "Weight", value: "70 kg" },
         { title: "Lifespan", value: "350 y" },
         { title: "Adulthood", value: "50 y" },
         {
           title: "Speed",
-          value: "7.5 m (Slow) (is not affected by heavy armor)",
+          value: "7.5 m (slow) (is not affected by heavy armor)",
         },
         {
           title: "Subraces",
@@ -113,7 +113,7 @@ const dwarf = {
         },
         {
           title: "Resilience",
-          value: "Adventage on poison saving throws, poison damage is halved",
+          value: "Advantage on poison saving throws, poison damage is halved",
         },
         {
           title: "Combat Training",
@@ -136,7 +136,49 @@ const dwarf = {
 const elf = {
   id: "elf",
   title: "Elf",
-  info: [],
+  info: [
+    {
+      title: "Stats",
+      rows: [
+        { title: "Height", value: "1.5-1.8 m (medium)" },
+        { title: "Weight", value: "45-65 kg" },
+        { title: "Lifespan", value: "750 y" },
+        { title: "Adulthood", value: "100 y" },
+        {
+          title: "Speed",
+          value: "13.5 m (normal)",
+        },
+        {
+          title: "Subraces",
+          value: "High elves, wood elves and dark elves (drow)",
+        },
+      ],
+    },
+    {
+      title: "Traits",
+      rows: [
+        { title: "Language", value: "Common, Elvish" },
+        { title: "Dexterity", value: "+2" },
+        {
+          title: "Darkvision",
+          value:
+            "Withing 18 m sees dim light as bright and darkness as dim light",
+        },
+        {
+          title: "Keen Senses",
+          value: "Proficiency in Perception",
+        },
+        {
+          title: "Fey Ancestry",
+          value: "Advantage against charmed and magic sleep saving throws",
+        },
+        {
+          title: "Trance",
+          value: "Instead of 8h sleep, needs only 4h",
+        },
+      ],
+    },
+  ],
 };
 
 const half_elf = {

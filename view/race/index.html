@@ -29,11 +29,11 @@
 <% races.forEach((race) => { %>
     <div class="top-0 start-0 position-absolute collapse bg-light bg-gradient" id="<%= race.id %>_popup">
         <div class="container-fluid d-flex flex-column p-5 dvh-100 vw-100">
-            <div class="row border-bottom border-primary py-2">
+            <div class="row py-2">
                 <div class="col">
                     <h1><%= race.title %></h1>
                 </div>
-                <div class="col-auto">
+                <div class="col-auto d-flex align-items-center">
                     <button
                         type="button"
                         class="btn-close"
