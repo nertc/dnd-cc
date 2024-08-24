@@ -5,12 +5,16 @@ const halfling = {
     {
       title: "Stats",
       rows: [
-        { title: "Height", value: "0.9 m (small)" },
+        { title: "Height", value: "1 m (small)" },
         { title: "Weight", value: "18-20 kg" },
         { title: "Lifespan", value: "150 y" },
         { title: "Adulthood", value: "20 y" },
         { title: "Size", value: "Small" },
         { title: "Speed", value: "7.5 m (Slow)" },
+        {
+          title: "Subraces",
+          value: "Lightfoot, stout",
+        },
       ],
     },
     {
@@ -30,10 +34,6 @@ const halfling = {
           title: "Nimbleness",
           value: "Can move through any creature that is larger",
         },
-        {
-          title: "Subraces",
-          value: "Lightfoot, stout",
-        },
       ],
     },
   ],
@@ -46,11 +46,15 @@ const gnome = {
     {
       title: "Stats",
       rows: [
-        { title: "Height", value: "0.9 m (small)" },
+        { title: "Height", value: "1 m (small)" },
         { title: "Weight", value: "18-20 kg" },
         { title: "Lifespan", value: "350-500 y" },
         { title: "Adulthood", value: "40 y" },
         { title: "Speed", value: "7.5 m (Slow)" },
+        {
+          title: "Subraces",
+          value: "Forest gnome, rock gnome",
+        },
       ],
     },
     {
@@ -71,10 +75,6 @@ const gnome = {
           title: "Nimbleness",
           value: "Can move through any creature that is larger",
         },
-        {
-          title: "Subraces",
-          value: "Forest gnome, rock gnome",
-        },
       ],
     },
   ],
@@ -83,7 +83,54 @@ const gnome = {
 const dwarf = {
   id: "dwarf",
   title: "Dwarf",
-  info: [],
+  info: [
+    {
+      title: "Stats",
+      rows: [
+        { title: "Height", value: "1.2-1.5 m (small)" },
+        { title: "Weight", value: "70 kg" },
+        { title: "Lifespan", value: "350 y" },
+        { title: "Adulthood", value: "50 y" },
+        {
+          title: "Speed",
+          value: "7.5 m (Slow) (is not affected by heavy armor)",
+        },
+        {
+          title: "Subraces",
+          value: "Hill dwarves, mountain dwarves",
+        },
+      ],
+    },
+    {
+      title: "Traits",
+      rows: [
+        { title: "Language", value: "Common, Dwarvish" },
+        { title: "Constitution", value: "+2" },
+        {
+          title: "Darkvision",
+          value:
+            "Withing 18 m sees dim light as bright and darkness as dim light",
+        },
+        {
+          title: "Resilience",
+          value: "Adventage on poison saving throws, poison damage is halved",
+        },
+        {
+          title: "Combat Training",
+          value: "Proficiency with battleaxe, handaxe, light hammer, warhammer",
+        },
+        {
+          title: "Tool Proficiency",
+          value: "Proficiency with smith or bewer or mason tools",
+        },
+        {
+          title: "Stonecunning",
+          value:
+            "Stonework origin Intelligence (History) checks + 2 * proficiency bonus",
+        },
+      ],
+    },
+  ],
 };
 
 const elf = {
