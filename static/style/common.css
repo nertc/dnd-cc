@@ -58,3 +58,19 @@ p, h1, h2, h3, h4, h5 {
 .min-w-1000px {
     min-width: 1000px;
 }
+
+.overflow-y-hidden {
+    overflow-y: hidden !important;
+}
+
+.overflow-y-auto {
+    overflow-y: auto !important;
+}
+
+.overflow-x-hidden {
+    overflow-x: hidden !important;
+}
+
+.overflow-x-auto {
+    overflow-x: auto !important;
+}

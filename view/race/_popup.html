@@ -1,0 +1,15 @@
+<% race.info.forEach(group => { %>
+    <div class="w-max-content mb-5">
+        <h4><%= group.title %></h4>
+        <% group.rows.forEach(({title, value}) => { %>
+            <div class="d-flex align-items-center mt-2">
+                <h5><%= title %></h5>
+                <p class="ms-2"><%= value %></p>
+            </div>
+        <% }); %>
+    </div>
+<% }); %>
+
+<div class="h-100 p-5 w-auto d-none d-lg-block">
+    <img height="100%" src="/static/image/race/<%= race.title %>.png" alt="<%= race.title %> picture">
+</div>
