@@ -349,6 +349,7 @@ const half_orc = {
 const dragonborn = {
   id: "dragonborn",
   title: "Dragonborn",
+  subraces: subraces.dragonborn,
   info: [
     {
       title: "Stats",

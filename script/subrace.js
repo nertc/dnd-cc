@@ -219,6 +219,206 @@ const dark = {
   ],
 };
 
+const black = {
+  id: "black",
+  title: "Black",
+  info: [
+    {
+      title: "Draconic Ancestry",
+      rows: [
+        {
+          title: "Damage Type",
+          value: "Acid",
+        },
+        {
+          title: "Breath Weapon",
+          value: "1.5-9 m line (Dexterity Save)",
+        },
+      ],
+    },
+  ],
+};
+
+const blue = {
+  id: "blue",
+  title: "Blue",
+  info: [
+    {
+      title: "Draconic Ancestry",
+      rows: [
+        {
+          title: "Damage Type",
+          value: "Lightning",
+        },
+        {
+          title: "Breath Weapon",
+          value: "1.5-9 m line (Dexterity Save)",
+        },
+      ],
+    },
+  ],
+};
+
+const brass = {
+  id: "brass",
+  title: "Brass",
+  info: [
+    {
+      title: "Draconic Ancestry",
+      rows: [
+        {
+          title: "Damage Type",
+          value: "Fire",
+        },
+        {
+          title: "Breath Weapon",
+          value: "1.5-9 m line (Dexterity Save)",
+        },
+      ],
+    },
+  ],
+};
+
+const bronze = {
+  id: "bronze",
+  title: "Bronze",
+  info: [
+    {
+      title: "Draconic Ancestry",
+      rows: [
+        {
+          title: "Damage Type",
+          value: "Lightning",
+        },
+        {
+          title: "Breath Weapon",
+          value: "1.5-9 m line (Dexterity Save)",
+        },
+      ],
+    },
+  ],
+};
+
+const copper = {
+  id: "copper",
+  title: "Copper",
+  info: [
+    {
+      title: "Draconic Ancestry",
+      rows: [
+        {
+          title: "Damage Type",
+          value: "Acid",
+        },
+        {
+          title: "Breath Weapon",
+          value: "1.5-9 m line (Dexterity Save)",
+        },
+      ],
+    },
+  ],
+};
+
+const gold = {
+  id: "gold",
+  title: "Gold",
+  info: [
+    {
+      title: "Draconic Ancestry",
+      rows: [
+        {
+          title: "Damage Type",
+          value: "Fire",
+        },
+        {
+          title: "Breath Weapon",
+          value: "4.5 m cone (Dexterity Save)",
+        },
+      ],
+    },
+  ],
+};
+
+const green = {
+  id: "green",
+  title: "Green",
+  info: [
+    {
+      title: "Draconic Ancestry",
+      rows: [
+        {
+          title: "Damage Type",
+          value: "Poison",
+        },
+        {
+          title: "Breath Weapon",
+          value: "4.5 m cone (Constitution Save)",
+        },
+      ],
+    },
+  ],
+};
+
+const red = {
+  id: "red",
+  title: "Red",
+  info: [
+    {
+      title: "Draconic Ancestry",
+      rows: [
+        {
+          title: "Damage Type",
+          value: "Fire",
+        },
+        {
+          title: "Breath Weapon",
+          value: "4.5 m cone (Dexterity Save)",
+        },
+      ],
+    },
+  ],
+};
+
+const silver = {
+  id: "silver",
+  title: "Silver",
+  info: [
+    {
+      title: "Draconic Ancestry",
+      rows: [
+        {
+          title: "Damage Type",
+          value: "Cold",
+        },
+        {
+          title: "Breath Weapon",
+          value: "4.5 m cone (Constitution Save)",
+        },
+      ],
+    },
+  ],
+};
+
+const white = {
+  id: "white",
+  title: "White",
+  info: [
+    {
+      title: "Draconic Ancestry",
+      rows: [
+        {
+          title: "Damage Type",
+          value: "Cold",
+        },
+        {
+          title: "Breath Weapon",
+          value: "4.5 m cone (Constitution Save)",
+        },
+      ],
+    },
+  ],
+};
+
 module.exports = {
   halfling: {
     lightfoot,
@@ -240,5 +440,18 @@ module.exports = {
     wood,
     dark,
     all: [high, wood, dark],
+  },
+  dragonborn: {
+    black,
+    blue,
+    brass,
+    bronze,
+    copper,
+    gold,
+    green,
+    red,
+    silver,
+    white,
+    all: [black, blue, brass, bronze, copper, gold, green, red, silver, white],
   },
 };
