@@ -1,2 +1,21 @@
-<h1>Subraces of <%= race %></h1>
-<h2><%= JSON.stringify(subraces.all) %></h2>
+<div class="d-flex justify-content-around h-100">
+    <% subraces.all.forEach(({id, title}) => { %>
+        <button
+            type="button"
+            class="btn btn-outline-primary w-20 min-w-140px h-100 d-flex justify-content-end flex-column align-items-center overflow-hidden py-3"
+            data-bs-toggle="collapse"
+            data-bs-target="#<%= id %>_popup"
+            aria-expanded="false"
+            aria-controls="<%= id %>_popup"
+        >
+            <img class="h-70 mb-4" src="/static/image/subrace/<%= id %>.png" alt="<%= title %> photo">
+            <div class="h-5em d-flex align-items-center justify-content-center">
+                <h3 class="text-center text-break"><%= title %></h3>
+            </div>
+        </button>
+    <% }); %>
+</div>
+
+<% subraces.all.forEach((subrace) => { %>
+    <%- include("_popup.html", { subrace }); %>
+<% }); %>
