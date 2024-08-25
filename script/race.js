@@ -184,7 +184,41 @@ const elf = {
 const half_elf = {
   id: "half_elf",
   title: "Half-Elf",
-  info: [],
+  info: [
+    {
+      title: "Stats",
+      rows: [
+        { title: "Height", value: "1.5-1.8 m (medium)" },
+        { title: "Weight", value: "45-82 kg" },
+        { title: "Lifespan", value: "180 y" },
+        { title: "Adulthood", value: "20 y" },
+        {
+          title: "Speed",
+          value: "13.5 m (normal)",
+        },
+      ],
+    },
+    {
+      title: "Traits",
+      rows: [
+        { title: "Language", value: "Common, Elvish, +1 Any language" },
+        { title: "Charisma", value: "+2, +1 Any two ability scores" },
+        {
+          title: "Darkvision",
+          value:
+            "Withing 18 m sees dim light as bright and darkness as dim light",
+        },
+        {
+          title: "Fey Ancestry",
+          value: "Advantage against charmed and magic sleep saving throws",
+        },
+        {
+          title: "Skill Versatility",
+          value: "Proficiency in any 2 skills",
+        },
+      ],
+    },
+  ],
 };
 
 const tiefling = {
