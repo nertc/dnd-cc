@@ -146,7 +146,7 @@ const elf = {
         { title: "Adulthood", value: "100 y" },
         {
           title: "Speed",
-          value: "13.5 m (normal)",
+          value: "9 m (normal)",
         },
         {
           title: "Subraces",
@@ -194,7 +194,7 @@ const half_elf = {
         { title: "Adulthood", value: "20 y" },
         {
           title: "Speed",
-          value: "13.5 m (normal)",
+          value: "9 m (normal)",
         },
       ],
     },
@@ -234,7 +234,7 @@ const tiefling = {
         { title: "Adulthood", value: "20 y" },
         {
           title: "Speed",
-          value: "13.5 m (normal)",
+          value: "9 m (normal)",
         },
       ],
     },
@@ -272,11 +272,11 @@ const human = {
       rows: [
         { title: "Height", value: "1.5-1.8 m (medium)" },
         { title: "Weight", value: "55-115 kg" },
-        { title: "Lifespan", value: "80-100 y" },
+        { title: "Lifespan", value: "70-90 y" },
         { title: "Adulthood", value: "20 y" },
         {
           title: "Speed",
-          value: "13.5 m (normal)",
+          value: "9 m (normal)",
         },
       ],
     },
@@ -295,10 +295,49 @@ const human = {
   ],
 };
 
-const half_prc = {
+const half_orc = {
   id: "half_orc",
   title: "Half-Orc",
-  info: [],
+  info: [
+    {
+      title: "Stats",
+      rows: [
+        { title: "Height", value: "1.5-2.15 m (medium)" },
+        { title: "Weight", value: "80-115 kg" },
+        { title: "Lifespan", value: "75 y" },
+        { title: "Adulthood", value: "14 y" },
+        {
+          title: "Speed",
+          value: "9 m (normal)",
+        },
+      ],
+    },
+    {
+      title: "Traits",
+      rows: [
+        { title: "Language", value: "Common, Orcish" },
+        { title: "Strength", value: "+2" },
+        { title: "Constitution", value: "+1" },
+        {
+          title: "Darkvision",
+          value:
+            "Withing 18 m sees dim light as bright and darkness as dim light",
+        },
+        {
+          title: "Menacing",
+          value: "Proficiency in Intimidation",
+        },
+        {
+          title: "Relentless Endurance",
+          value: "Once per long rest dropping to 0 hp sets you 1 hp",
+        },
+        {
+          title: "Savage Attacks",
+          value: "When crit roll one additional dice of the weapon",
+        },
+      ],
+    },
+  ],
 };
 
 const dragonborn = {
@@ -315,7 +354,7 @@ const all = [
   half_elf,
   tiefling,
   human,
-  half_prc,
+  half_orc,
   dragonborn,
 ];
 
@@ -327,7 +366,7 @@ module.exports = {
   half_elf,
   tiefling,
   human,
-  half_prc,
+  half_orc,
   dragonborn,
   all,
 };
