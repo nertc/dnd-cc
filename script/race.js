@@ -1,6 +1,9 @@
+const subraces = require("./subrace");
+
 const halfling = {
   id: "halfling",
   title: "Halfling",
+  subraces: subraces.halfling,
   info: [
     {
       title: "Stats",

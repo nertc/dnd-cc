@@ -23,6 +23,31 @@ app.get("/race", (req, res) => {
   });
 });
 
+app.get("/subrace", (req, res) => {
+  const race = req.query["race"];
+  const subraces = races[race].subraces;
+
+  if (subraces) {
+    res.render("index.html", {
+      page: "subrace/index.html",
+      title: "Subrace",
+      race,
+      subraces,
+    });
+  } else {
+    res.redirect(`/class?race=${race}`);
+  }
+});
+
+app.get("/class", (req, res) => {
+  const race = req.query["race"];
+  res.render("index.html", {
+    page: "class/index.html",
+    title: "Class",
+    race,
+  });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}`);
 });
