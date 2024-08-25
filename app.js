@@ -41,10 +41,12 @@ app.get("/subrace", (req, res) => {
 
 app.get("/class", (req, res) => {
   const race = req.query["race"];
+  const subrace = req.query["subrace"];
   res.render("index.html", {
     page: "class/index.html",
     title: "Class",
     race,
+    subrace,
   });
 });
 

@@ -35,8 +35,8 @@
             </div>
         </article>
 
-        <form class="row mt-3 d-flex justify-content-center" action="/subrace" method="get">
-            <input type="hidden" name="race" value="<%= race.id %>">
+        <form class="row mt-3 d-flex justify-content-center" action="/class" method="get">
+            <input type="hidden" name="race" value="<%= race %>">
             <input type="hidden" name="subrace" value="<%= subrace.id %>">
             <button type="submit" class="btn btn-primary btn-lg w-auto px-5">Confirm</button>
         </form>
