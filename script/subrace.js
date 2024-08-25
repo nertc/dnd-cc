@@ -128,6 +128,97 @@ const mountain = {
   ],
 };
 
+const high = {
+  id: "high",
+  title: "High",
+  info: [
+    {
+      title: "Traits",
+      rows: [
+        {
+          title: "Intelligence",
+          value: "+1",
+        },
+        {
+          title: "Elf Weapon Training",
+          value: "Proficiency with longsword, shortsword, shortbow and longbow",
+        },
+        {
+          title: "Cantrip",
+          value:
+            "Knows 1 cantrip from wizard spell list, cast with Intelligence",
+        },
+        {
+          title: "Extra Language",
+          value: "+1 Any language",
+        },
+      ],
+    },
+  ],
+};
+
+const wood = {
+  id: "wood",
+  title: "Wood",
+  info: [
+    {
+      title: "Traits",
+      rows: [
+        {
+          title: "Wisdom",
+          value: "+1",
+        },
+        {
+          title: "Elf Weapon Training",
+          value: "Proficiency with longsword, shortsword, shortbow and longbow",
+        },
+        {
+          title: "Fleet Of Foot",
+          value: "Speed 10.5 m (fast)",
+        },
+        {
+          title: "Mask Of The Wild",
+          value: "Can try to hide when lightly obscured by nature",
+        },
+      ],
+    },
+  ],
+};
+
+const dark = {
+  id: "dark",
+  title: "Dark (Drow)",
+  info: [
+    {
+      title: "Traits",
+      rows: [
+        {
+          title: "Charisma",
+          value: "+1",
+        },
+        {
+          title: "Drow Weapon Training",
+          value: "Proficiency with rapiers, shortswords and hand crossbows",
+        },
+        {
+          title: "Superior Dark Vision",
+          value: "Dark vision radius 36 m",
+        },
+        {
+          title: "Sunlight Sensitivity",
+          value:
+            "Attack and Wisdom (Perception) rolls disadvantage, when target is in direct sunlight",
+        },
+        {
+          title: "Drow Magic",
+          value:
+            "Lvl 1 - Dancing Lights cantrip; lvl 3 - once per long rest Faerie Fire; lvl 5 - once per long rest Darkness. Cast with Charisma",
+        },
+      ],
+    },
+  ],
+};
+
 module.exports = {
   halfling: {
     lightfoot,
@@ -143,5 +234,11 @@ module.exports = {
     hill,
     mountain,
     all: [hill, mountain],
+  },
+  elf: {
+    high,
+    wood,
+    dark,
+    all: [high, wood, dark],
   },
 };

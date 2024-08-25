@@ -141,6 +141,7 @@ const dwarf = {
 const elf = {
   id: "elf",
   title: "Elf",
+  subraces: subraces.elf,
   info: [
     {
       title: "Stats",
