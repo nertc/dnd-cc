@@ -224,7 +224,43 @@ const half_elf = {
 const tiefling = {
   id: "tiefling",
   title: "Tiefling",
-  info: [],
+  info: [
+    {
+      title: "Stats",
+      rows: [
+        { title: "Height", value: "1.5-1.8 m (medium)" },
+        { title: "Weight", value: "55-115 kg" },
+        { title: "Lifespan", value: "80-100 y" },
+        { title: "Adulthood", value: "20 y" },
+        {
+          title: "Speed",
+          value: "13.5 m (normal)",
+        },
+      ],
+    },
+    {
+      title: "Traits",
+      rows: [
+        { title: "Language", value: "Common, Infernal" },
+        { title: "Intelligence", value: "+1" },
+        { title: "Charisma", value: "+2" },
+        {
+          title: "Darkvision",
+          value:
+            "Withing 18 m sees dim light as bright and darkness as dim light",
+        },
+        {
+          title: "Hellish Resistance",
+          value: "Fire damage is halved",
+        },
+        {
+          title: "Infernal Legacy",
+          value:
+            "lvl 1 - Thaumaturgy cantrip; lvl 3 - once per long rest cast Hellish Rebuke as 2nd lvl spell; lvl 5 - once per long rest cast Darkness; Use charisma for these spells",
+        },
+      ],
+    },
+  ],
 };
 
 const human = {
