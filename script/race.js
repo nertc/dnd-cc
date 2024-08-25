@@ -45,6 +45,7 @@ const halfling = {
 const gnome = {
   id: "gnome",
   title: "Gnome",
+  subraces: subraces.gnome,
   info: [
     {
       title: "Stats",
