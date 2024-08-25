@@ -88,6 +88,46 @@ const rock = {
   ],
 };
 
+const hill = {
+  id: "hill",
+  title: "Hill",
+  info: [
+    {
+      title: "Traits",
+      rows: [
+        {
+          title: "Wisdom",
+          value: "+1",
+        },
+        {
+          title: "Dwarven Toughness",
+          value: "+1 hp, +1 hp per level",
+        },
+      ],
+    },
+  ],
+};
+
+const mountain = {
+  id: "mountain",
+  title: "Mountain",
+  info: [
+    {
+      title: "Traits",
+      rows: [
+        {
+          title: "Strength",
+          value: "+2",
+        },
+        {
+          title: "Dwarven Armor Training",
+          value: "Proficiency with light and medium armor",
+        },
+      ],
+    },
+  ],
+};
+
 module.exports = {
   halfling: {
     lightfoot,
@@ -98,5 +138,10 @@ module.exports = {
     forest,
     rock,
     all: [forest, rock],
+  },
+  dwarf: {
+    hill,
+    mountain,
+    all: [hill, mountain],
   },
 };

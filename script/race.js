@@ -87,6 +87,7 @@ const gnome = {
 const dwarf = {
   id: "dwarf",
   title: "Dwarf",
+  subraces: subraces.dwarf,
   info: [
     {
       title: "Stats",
