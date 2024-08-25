@@ -266,7 +266,33 @@ const tiefling = {
 const human = {
   id: "human",
   title: "Human",
-  info: [],
+  info: [
+    {
+      title: "Stats",
+      rows: [
+        { title: "Height", value: "1.5-1.8 m (medium)" },
+        { title: "Weight", value: "55-115 kg" },
+        { title: "Lifespan", value: "80-100 y" },
+        { title: "Adulthood", value: "20 y" },
+        {
+          title: "Speed",
+          value: "13.5 m (normal)",
+        },
+      ],
+    },
+    {
+      title: "Traits",
+      rows: [
+        { title: "Language", value: "Common, +1 Any language" },
+        { title: "Ability Scores", value: "+1 Any two different" },
+        { title: "Skills", value: "Proficiency in any 1 skill" },
+        {
+          title: "Feat",
+          value: "Any 1 feat",
+        },
+      ],
+    },
+  ],
 };
 
 const half_prc = {
