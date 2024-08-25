@@ -343,7 +343,43 @@ const half_orc = {
 const dragonborn = {
   id: "dragonborn",
   title: "Dragonborn",
-  info: [],
+  info: [
+    {
+      title: "Stats",
+      rows: [
+        { title: "Height", value: "180 m (medium)" },
+        { title: "Weight", value: "115 kg" },
+        { title: "Lifespan", value: "80 y" },
+        { title: "Adulthood", value: "15 y" },
+        {
+          title: "Speed",
+          value: "9 m (normal)",
+        },
+        {
+          title: "Subraces",
+          value:
+            "Black, Blue, Brass, Bronze, Copper, Gold, Green, Red, Silver and White",
+        },
+      ],
+    },
+    {
+      title: "Traits",
+      rows: [
+        { title: "Language", value: "Common, Draconic" },
+        { title: "Strength", value: "+2" },
+        { title: "Charisma", value: "+1" },
+        {
+          title: "Breath Weapon",
+          value:
+            "Draconic Ancestry weapon. Creatures take saving throw DC 8 + your Constitution + your Proficiency. lvl 1 - 2d6 damage on fail, half on success; lvl 6 - 3d6 instead; lvl 11 - 4d6 instead; lvl 16 - 5d6 instead",
+        },
+        {
+          title: "Damage Resistance",
+          value: "Type of Draconic Ancestry damage is halved against you",
+        },
+      ],
+    },
+  ],
 };
 
 const all = [
