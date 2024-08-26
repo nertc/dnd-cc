@@ -148,10 +148,43 @@ const druid = {
   ],
 };
 
+const fighter = {
+  id: "fighter",
+  title: "Fighter",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description(
+          "A master of martial combats, skilled with a variety of weapons and armor"
+        ),
+        hitDie("d10"),
+        primaryAbility("Strength or Dexterity"),
+        savingThrow("Strength and Constitution"),
+        armorWeapon("All armor, shields, simple and martial weapons"),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(4),
+        ranger(3.5),
+        defender(4),
+        healer(1),
+        magic(2),
+        magicDefense(3),
+        social(1),
+        explore(2),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
   bard,
   cleric,
   druid,
-  all: [barbarian, bard, cleric, druid],
+  fighter,
+  all: [barbarian, bard, cleric, druid, fighter],
 };
