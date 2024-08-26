@@ -242,6 +242,40 @@ const paladin = {
   ],
 };
 
+const rangerClass = {
+  id: "ranger",
+  title: "Ranger",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description(
+          "A warrior who uses martial powers and nature magic to combat threats on the edges of civilization"
+        ),
+        hitDie("d10"),
+        primaryAbility("Dexterity and Wisdom"),
+        savingThrow("Strength and Dexterity"),
+        armorWeapon(
+          "Light and medium armor, shields, simple and martial weapons"
+        ),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(3.5),
+        ranger(4),
+        defender(2),
+        healer(2),
+        magic(2.5),
+        magicDefense(2),
+        social(2),
+        explore(4),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
   bard,
@@ -250,5 +284,6 @@ module.exports = {
   fighter,
   monk,
   paladin,
-  all: [barbarian, bard, cleric, druid, fighter, monk, paladin],
+  ranger: rangerClass,
+  all: [barbarian, bard, cleric, druid, fighter, monk, paladin, rangerClass],
 };
