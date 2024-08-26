@@ -82,8 +82,41 @@ const bard = {
   ],
 };
 
+const cleric = {
+  id: "cleric",
+  title: "Cleric",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description(
+          "A priestly champion who wields divine magic in service of a higher power"
+        ),
+        hitDie("d8"),
+        primaryAbility("Wisdom"),
+        savingThrow("Wisdom & Charisma"),
+        armorWeapon("Light and medium armor, shields, simple weapons"),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(2),
+        ranger(1),
+        defender(3.5),
+        healer(5),
+        magic(4),
+        magicDefense(2),
+        social(3),
+        explore(3),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
   bard,
-  all: [barbarian, bard],
+  cleric,
+  all: [barbarian, bard, cleric],
 };
