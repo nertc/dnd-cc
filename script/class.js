@@ -350,7 +350,7 @@ const warlock = {
       title: "General",
       rows: [
         description(
-          "A weilder of magic that is derived from a bargain with an extraplanar entity"
+          "A wielder of magic that is derived from a bargain with an extraplanar entity"
         ),
         hitDie("d8"),
         primaryAbility("Charisma"),
@@ -374,6 +374,38 @@ const warlock = {
   ],
 };
 
+const wizard = {
+  id: "wizard",
+  title: "Wizard",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description(
+          "A scholarly magic-user capable of manipulating the structures of reality"
+        ),
+        hitDie("d6"),
+        primaryAbility("Intelligence"),
+        savingThrow("Intelligence and Wisdom"),
+        armorWeapon("Daggers, darts, slings, quarterstaffs, light crossbows"),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(1),
+        ranger(1),
+        defender(1),
+        healer(1),
+        magic(5),
+        magicDefense(3.5),
+        social(3),
+        explore(3),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
   bard,
@@ -386,6 +418,7 @@ module.exports = {
   rogue,
   sorcerer,
   warlock,
+  wizard,
   all: [
     barbarian,
     bard,
@@ -398,5 +431,6 @@ module.exports = {
     rogue,
     sorcerer,
     warlock,
+    wizard,
   ],
 };
