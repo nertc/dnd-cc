@@ -1,0 +1,45 @@
+<div class="top-0 start-0 position-absolute collapse bg-light bg-gradient" id="<%= clas.id %>_popup">
+    <div class="container-fluid d-flex flex-column p-5 dvh-100 vw-100">
+        <div class="row py-2">
+            <div class="col">
+                <h1><%= clas.title %></h1>
+            </div>
+            <div class="col-auto d-flex align-items-center">
+                <button
+                    type="button"
+                    class="btn-close"
+                    aria-label="Close"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#<%= clas.id %>_popup"
+                    aria-expanded="true"
+                    aria-controls="<%= clas.id %>_popup"
+                ></button>
+            </div>
+        </div>
+
+        <article class="mt-3 row h-100 border border-primary rounded d-flex flex-column flex-nowrap flex-lg-wrap align-items-stretch overflow-x-hidden p-3">
+            <% clas.info.forEach(group => { %>
+                <div class="col-12 mb-5 col-lg-6">
+                    <h4><%= group.title %></h4>
+                    <% group.rows.forEach(({title, value}) => { %>
+                        <div class="d-flex align-items-center mt-2">
+                            <h5><%= title %></h5>
+                            <p class="ms-2"><%= value %></p>
+                        </div>
+                    <% }); %>
+                </div>
+            <% }); %>
+            
+            <div class="h-100 p-5 w-auto d-none d-lg-block">
+                <img height="100%" src="/static/image/class/<%= clas.id %>.png" alt="<%= clas.title %> picture">
+            </div>
+        </article>
+
+        <form class="row mt-3 d-flex justify-content-center" action="/class" method="get">
+            <input type="hidden" name="race" value="<%= race %>">
+            <input type="hidden" name="subrace" value="<%= subrace %>">
+            <input type="hidden" name="class" value="<%= clas.id %>">
+            <button type="submit" class="btn btn-primary btn-lg w-auto px-5">Confirm</button>
+        </form>
+    </div>
+</div>

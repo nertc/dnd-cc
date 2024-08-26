@@ -1,6 +1,7 @@
 const path = require("path");
 const express = require("express");
 const races = require("./script/race");
+const classes = require("./script/class");
 
 const app = express();
 const port = 3001;
@@ -47,6 +48,7 @@ app.get("/class", (req, res) => {
     title: "Class",
     race,
     subrace,
+    classes: classes.all,
   });
 });
 
