@@ -342,6 +342,38 @@ const sorcerer = {
   ],
 };
 
+const warlock = {
+  id: "warlock",
+  title: "Warlock",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description(
+          "A weilder of magic that is derived from a bargain with an extraplanar entity"
+        ),
+        hitDie("d8"),
+        primaryAbility("Charisma"),
+        savingThrow("Wisdom and Charisma"),
+        armorWeapon("Light armor, simple weapons"),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(2),
+        ranger(1),
+        defender(2),
+        healer(1),
+        magic(4.5),
+        magicDefense(3.5),
+        social(3),
+        explore(3),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
   bard,
@@ -353,6 +385,7 @@ module.exports = {
   ranger: rangerClass,
   rogue,
   sorcerer,
+  warlock,
   all: [
     barbarian,
     bard,
@@ -364,5 +397,6 @@ module.exports = {
     rangerClass,
     rogue,
     sorcerer,
+    warlock,
   ],
 };
