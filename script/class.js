@@ -180,11 +180,44 @@ const fighter = {
   ],
 };
 
+const monk = {
+  id: "monk",
+  title: "Monk",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description(
+          "A master of martial arts, harnessing the power of the body in pursuit of physical and spiritual perfection"
+        ),
+        hitDie("d8"),
+        primaryAbility("Dexterity and Wisdom"),
+        savingThrow("Strength and Dexterity"),
+        armorWeapon("Simple weapons, shortswords"),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(3.5),
+        ranger(1.5),
+        defender(2),
+        healer(1),
+        magic(1),
+        magicDefense(4),
+        social(2),
+        explore(3),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
   bard,
   cleric,
   druid,
   fighter,
-  all: [barbarian, bard, cleric, druid, fighter],
+  monk,
+  all: [barbarian, bard, cleric, druid, fighter, monk],
 };
