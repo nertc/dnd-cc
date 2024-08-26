@@ -212,6 +212,36 @@ const monk = {
   ],
 };
 
+const paladin = {
+  id: "paladin",
+  title: "Paladin",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description("A holy warrior bound to a sacred oath"),
+        hitDie("d10"),
+        primaryAbility("Strength and Charisma"),
+        savingThrow("Wisdom and Charisma"),
+        armorWeapon("All armor, shields, simple and martial weapons"),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(4),
+        ranger(2.5),
+        defender(4),
+        healer(2.5),
+        magic(2.5),
+        magicDefense(4),
+        social(2),
+        explore(2),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
   bard,
@@ -219,5 +249,6 @@ module.exports = {
   druid,
   fighter,
   monk,
-  all: [barbarian, bard, cleric, druid, fighter, monk],
+  paladin,
+  all: [barbarian, bard, cleric, druid, fighter, monk, paladin],
 };
