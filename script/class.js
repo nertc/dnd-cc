@@ -276,6 +276,40 @@ const rangerClass = {
   ],
 };
 
+const rogue = {
+  id: "rogue",
+  title: "Rogue",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description(
+          "A scoundrel who uses stealth and trickery to overcome obstacles and enemies"
+        ),
+        hitDie("d8"),
+        primaryAbility("Dexterity"),
+        savingThrow("Dexterity and Intelligence"),
+        armorWeapon(
+          "Light armor, simple weapons, hand crossbows, longswords, rapiers, shortswords"
+        ),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(4),
+        ranger(4),
+        defender(2.5),
+        healer(0),
+        magic(2),
+        magicDefense(2),
+        social(3.5),
+        explore(3.5),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
   bard,
@@ -285,5 +319,16 @@ module.exports = {
   monk,
   paladin,
   ranger: rangerClass,
-  all: [barbarian, bard, cleric, druid, fighter, monk, paladin, rangerClass],
+  rogue,
+  all: [
+    barbarian,
+    bard,
+    cleric,
+    druid,
+    fighter,
+    monk,
+    paladin,
+    rangerClass,
+    rogue,
+  ],
 };
