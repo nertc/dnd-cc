@@ -48,7 +48,42 @@ const barbarian = {
   ],
 };
 
+const bard = {
+  id: "bard",
+  title: "Bard",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description(
+          "An inspiring magician whose power echoes the music creation"
+        ),
+        hitDie("d8"),
+        primaryAbility("Charisma"),
+        savingThrow("Dexterity & Charisma"),
+        armorWeapon(
+          "Light armor, simple weapons, hand crossbows, longswords,rapiers, shortswords"
+        ),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(2),
+        ranger(2),
+        defender(2.5),
+        healer(3),
+        magic(4),
+        magicDefense(2),
+        social(5),
+        explore(3),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
-  all: [barbarian],
+  bard,
+  all: [barbarian, bard],
 };
