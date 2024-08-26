@@ -26,7 +26,7 @@ const barbarian = {
         description("A fierce warrior who can enter a battle rage"),
         hitDie("d12"),
         primaryAbility("Strength"),
-        savingThrow("Strength & Constitution"),
+        savingThrow("Strength and Constitution"),
         armorWeapon(
           "Light and medium armor, shields, simple and martial weapons"
         ),
@@ -60,7 +60,7 @@ const bard = {
         ),
         hitDie("d8"),
         primaryAbility("Charisma"),
-        savingThrow("Dexterity & Charisma"),
+        savingThrow("Dexterity and Charisma"),
         armorWeapon(
           "Light armor, simple weapons, hand crossbows, longswords,rapiers, shortswords"
         ),
@@ -94,7 +94,7 @@ const cleric = {
         ),
         hitDie("d8"),
         primaryAbility("Wisdom"),
-        savingThrow("Wisdom & Charisma"),
+        savingThrow("Wisdom and Charisma"),
         armorWeapon("Light and medium armor, shields, simple weapons"),
       ],
     },
@@ -126,7 +126,7 @@ const druid = {
         ),
         hitDie("d8"),
         primaryAbility("Wisdom"),
-        savingThrow("Intelligence & Wisdom"),
+        savingThrow("Intelligence and Wisdom"),
         armorWeapon(
           "Light and medium armor (nonmetal), shields (nonmetal), clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears"
         ),
@@ -310,6 +310,38 @@ const rogue = {
   ],
 };
 
+const sorcerer = {
+  id: "sorcerer",
+  title: "Sorcerer",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description(
+          "A spellcaster who draws on inherent magic from a gift or bloodline"
+        ),
+        hitDie("d6"),
+        primaryAbility("Charisma"),
+        savingThrow("Constitution and Charisma"),
+        armorWeapon("Daggers, darts, slings, quarterstaffs, light crossbows"),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(1),
+        ranger(1),
+        defender(1.5),
+        healer(1),
+        magic(5),
+        magicDefense(3.5),
+        social(3),
+        explore(3),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
   bard,
@@ -320,6 +352,7 @@ module.exports = {
   paladin,
   ranger: rangerClass,
   rogue,
+  sorcerer,
   all: [
     barbarian,
     bard,
@@ -330,5 +363,6 @@ module.exports = {
     paladin,
     rangerClass,
     rogue,
+    sorcerer,
   ],
 };
