@@ -114,9 +114,44 @@ const cleric = {
   ],
 };
 
+const druid = {
+  id: "druid",
+  title: "Druid",
+  info: [
+    {
+      title: "General",
+      rows: [
+        description(
+          "A priest of the Old Faith, wielding the powers of nature and adopting animal forms"
+        ),
+        hitDie("d8"),
+        primaryAbility("Wisdom"),
+        savingThrow("Intelligence & Wisdom"),
+        armorWeapon(
+          "Light and medium armor (nonmetal), shields (nonmetal), clubs, daggers, darts, javelins, maces, quarterstaffs, scimitars, sickles, slings, spears"
+        ),
+      ],
+    },
+    {
+      title: "Usecase",
+      rows: [
+        melee(3),
+        ranger(1),
+        defender(4),
+        healer(3),
+        magic(3),
+        magicDefense(2),
+        social(2),
+        explore(4.5),
+      ],
+    },
+  ],
+};
+
 module.exports = {
   barbarian,
   bard,
   cleric,
-  all: [barbarian, bard, cleric],
+  druid,
+  all: [barbarian, bard, cleric, druid],
 };
