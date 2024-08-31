@@ -84,6 +84,23 @@ app.get("/alignment", (req, res) => {
   });
 });
 
+app.get("/character", (req, res) => {
+  const race = races[req.query["race"]];
+  const subrace = race.subraces[req.query["subrace"]];
+  const clas = classes[req.query["clas"]];
+  const background = backgrounds[req.query["background"]];
+  const alignment = alignments[req.query["alignment"]];
+  res.render("index.html", {
+    page: "character/index.html",
+    title: "Character",
+    race,
+    subrace,
+    clas,
+    background,
+    alignment,
+  });
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on http://localhost:${port}`);
 });

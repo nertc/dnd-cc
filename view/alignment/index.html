@@ -19,7 +19,7 @@
 <div id="confirm_buttons" class="w-100 h-10 position-relative">
     <% alignments.forEach((alignment) => { %>
         <div class="collapse position-absolute w-100 h-100 transition-none" id="<%= alignment.id %>_submit" data-bs-parent="#confirm_buttons">
-            <form class="w-100 h-100 d-flex justify-content-center align-items-center" action="/alignment" method="get">
+            <form class="w-100 h-100 d-flex justify-content-center align-items-center" action="/character" method="get">
                 <input type="hidden" name="race" value="<%= race %>">
                 <input type="hidden" name="subrace" value="<%= subrace %>">
                 <input type="hidden" name="clas" value="<%= clas %>">

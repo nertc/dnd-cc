@@ -1,0 +1,58 @@
+<div class="p-3 w-100 h-100 overflow-y-auto">
+    <article class="d-flex align-items-center justify-content-between flex-wrap w-100 border border-primary rounded">
+        <div class="col-12 col-md-6 h-100 d-flex flex-column flex-nowrap flex-column p-3">
+            <h3><%= alignment.title %> <%= subrace.title %> <%= race.title %></h3>
+            <% race.info.forEach(group => { %>
+                <div class="col-12 mt-5">
+                    <h4><%= group.title %></h4>
+                    <% group.rows.forEach(({title, value}) => { %>
+                        <div class="d-flex align-items-center mt-2">
+                            <h5><%= title %></h5>
+                            <p class="ms-2"><%= value %></p>
+                        </div>
+                    <% }); %>
+                </div>
+            <% }); %>
+    
+            <% subrace.info.forEach(group => { %>
+                <div class="col-12 mt-5">
+                    <h4><%= group.title %></h4>
+                    <% group.rows.forEach(({title, value}) => { %>
+                        <div class="d-flex align-items-center mt-2">
+                            <h5><%= title %></h5>
+                            <p class="ms-2"><%= value %></p>
+                        </div>
+                    <% }); %>
+                </div>
+            <% }); %>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <img width="70%" src="/static/image/subrace/<%= subrace.id %>.png" alt="<%= subrace.title %> picture">
+        </div>
+    </article>
+    <article class="d-flex align-items-center justify-content-between flex-wrap w-100 mt-3 border border-primary rounded">
+        <div class="col-12 col-md-6 h-100 d-flex flex-column flex-nowrap flex-column p-3">
+            <h3><%= clas.title %></h3>
+            <% clas.info.forEach(group => { %>
+                <div class="col-12 mt-5">
+                    <h4><%= group.title %></h4>
+                    <% group.rows.forEach(({title, value}) => { %>
+                        <div class="d-flex align-items-center mt-2">
+                            <h5><%= title %></h5>
+                            <p class="ms-2"><%= value %></p>
+                        </div>
+                    <% }); %>
+                </div>
+            <% }); %>
+        </div>
+        <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+            <img width="70%" src="/static/image/class/<%= clas.id %>.png" alt="<%= clas.title %> picture">
+        </div>
+    </article>
+    <article class="d-flex flex-column flex-nowrap flex-column p-3 w-100 mt-3 border border-primary rounded">
+        <h3 class="mb-3"><%= background.title %></h3>
+        <% background.proficiencies.forEach(proficiency => { %>
+            <p><%= proficiency %></p>
+        <% }) %>
+    </article>
+</div>
