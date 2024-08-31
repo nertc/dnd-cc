@@ -3,6 +3,7 @@ const express = require("express");
 const races = require("./script/race");
 const classes = require("./script/class");
 const backgrounds = require("./script/background");
+const alignments = require("./script/alignments");
 
 const app = express();
 const port = 3001;
@@ -64,6 +65,22 @@ app.get("/background", (req, res) => {
     subrace,
     clas,
     backgrounds: backgrounds.all,
+  });
+});
+
+app.get("/alignment", (req, res) => {
+  const race = req.query["race"];
+  const subrace = req.query["subrace"];
+  const clas = req.query["clas"];
+  const background = req.query["background"];
+  res.render("index.html", {
+    page: "alignment/index.html",
+    title: "Alignment",
+    race,
+    subrace,
+    clas,
+    background,
+    alignments: alignments.all,
   });
 });
 

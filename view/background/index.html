@@ -19,7 +19,7 @@
 <div id="confirm_buttons" class="w-100 position-relative">
     <% backgrounds.forEach((background) => { %>
         <div class="collapse position-absolute w-100 transition-none" id="<%= background.id %>_submit" data-bs-parent="#confirm_buttons">
-            <form class="w-100 d-flex justify-content-center" action="/background" method="get">
+            <form class="w-100 d-flex justify-content-center" action="/alignment" method="get">
                 <input type="hidden" name="race" value="<%= race %>">
                 <input type="hidden" name="subrace" value="<%= subrace %>">
                 <input type="hidden" name="clas" value="<%= clas %>">
