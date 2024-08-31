@@ -51,6 +51,10 @@ p, h1, h2, h3, h4, h5 {
     height: 80% !important;
 }
 
+.h-90 {
+    height: 90% !important;
+}
+
 .h-5em {
     height: 5em !important;
 }
@@ -81,4 +85,8 @@ p, h1, h2, h3, h4, h5 {
 
 .overflow-x-auto {
     overflow-x: auto !important;
+}
+
+.transition-none {
+    transition: none !important;
 }

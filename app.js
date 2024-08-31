@@ -2,6 +2,7 @@ const path = require("path");
 const express = require("express");
 const races = require("./script/race");
 const classes = require("./script/class");
+const backgrounds = require("./script/background");
 
 const app = express();
 const port = 3001;
@@ -49,6 +50,20 @@ app.get("/class", (req, res) => {
     race,
     subrace,
     classes: classes.all,
+  });
+});
+
+app.get("/background", (req, res) => {
+  const race = req.query["race"];
+  const subrace = req.query["subrace"];
+  const clas = req.query["clas"];
+  res.render("index.html", {
+    page: "background/index.html",
+    title: "Background",
+    race,
+    subrace,
+    clas,
+    backgrounds: backgrounds.all,
   });
 });
 
