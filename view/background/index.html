@@ -1,8 +1,8 @@
-<div class="d-flex justify-content-between gap-3 w-100 h-90 p-3 flex-wrap">
+<div class="d-flex justify-content-between gap-3 w-100 h-90 overflow-y-auto p-3 flex-wrap">
     <% backgrounds.forEach(background => { %>
         <button
             type="button"
-            class="btn btn-outline-primary w-20 p-4"
+            class="btn btn-outline-primary col-lg-2 col-md-3 col-12 p-4"
             data-bs-toggle="collapse"
             data-bs-target="#<%= background.id %>_submit"
             aria-expanded="false"
@@ -16,10 +16,10 @@
     <% }) %>
 </div>
 
-<div id="confirm_buttons" class="w-100 position-relative">
+<div id="confirm_buttons" class="w-100 h-10 position-relative">
     <% backgrounds.forEach((background) => { %>
-        <div class="collapse position-absolute w-100 transition-none" id="<%= background.id %>_submit" data-bs-parent="#confirm_buttons">
-            <form class="w-100 d-flex justify-content-center" action="/alignment" method="get">
+        <div class="collapse position-absolute h-100 w-100 transition-none" id="<%= background.id %>_submit" data-bs-parent="#confirm_buttons">
+            <form class="w-100 h-100 d-flex justify-content-center align-items-center" action="/alignment" method="get">
                 <input type="hidden" name="race" value="<%= race %>">
                 <input type="hidden" name="subrace" value="<%= subrace %>">
                 <input type="hidden" name="clas" value="<%= clas %>">
