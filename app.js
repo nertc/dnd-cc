@@ -6,7 +6,7 @@ const backgrounds = require("./script/background");
 const alignments = require("./script/alignments");
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 app.engine(".html", require("ejs").renderFile);
 app.set("view engine", "html");
